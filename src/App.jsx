@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade, Mousewheel } from 'swiper/modules';
@@ -34,8 +35,8 @@ const products = [
     category: 'Produce'
   },
   { 
-    title: 'Cassava Roots', 
-    desc: 'High-quality, starchy cassava roots cultivated with care perfectly suited for varied culinary needs.', 
+    title: 'Cassava Stems', 
+    desc: 'High-quality, starchy cassava stems cultivated with care perfectly suited for varied culinary needs.', 
     image: '/assets/Images/Cassava/3.jpg',
     category: 'Crops'
   },
