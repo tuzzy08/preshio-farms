@@ -42,13 +42,13 @@ const products = [
 ];
 
 const galleryImages = [
+  '/assets/Images/Pepper/pepper-2.jpg',
   '/assets/Images/Farm/farm-1.jpeg',
   '/assets/Images/Farm/farm-3.jpeg',
-  '/assets/Images/Farm/farm-4.jpeg',
   '/assets/Images/Livestock/livestock-2.jpg',
-  '/assets/Images/Greenhouse/greenhouse-2.jpg',
+  '/assets/Images/Farm/farm-4.jpeg',
   '/assets/Images/Cassava/Cassava-1.jpeg',
-  '/assets/Images/Pepper/pepper-2.jpg',
+  '/assets/Images/Greenhouse/greenhouse-2.jpg',
 ];
 
 export default function App() {
@@ -153,7 +153,7 @@ export default function App() {
             playsInline
             className="hero-video"
           >
-            <source src="/assets/Videos/Hero/hero-2.mp4" type="video/mp4" />
+            <source src="/assets/Videos/Hero/hero-1.mp4" type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
         </div>
@@ -245,6 +245,7 @@ export default function App() {
             modules={[Navigation, Pagination, Autoplay, Mousewheel]}
             spaceBetween={30}
             slidesPerView={1}
+            speed={1000}
             breakpoints={{
               640: { slidesPerView: 1.5 },
               1024: { slidesPerView: 2.5 },
@@ -302,9 +303,10 @@ export default function App() {
                 From vast cassava fields to modern greenhouse setups, Preshio Farms integrates traditional farming wisdom with modern agricultural technology.
               </p>
               <ul className="check-list">
-                <li><ArrowRight size={16} /> Over 500 Acres of arable land</li>
+                <li><ArrowRight size={16} /> Efficient and sustainable farming practices</li>
                 <li><ArrowRight size={16} /> State-of-the-art greenhouse facilities</li>
                 <li><ArrowRight size={16} /> Zero-waste farm ecosystem</li>
+                <li><ArrowRight size={16} /> Farm logistics and transportation services</li>
               </ul>
               <button className="solid-btn mt-4">Discover Our Process</button>
             </motion.div>
@@ -315,26 +317,42 @@ export default function App() {
       {/* Gallery Carousel */}
       <section className="gallery-section bg-beige" id="gallery">
         <div className="container">
-          <div className="section-header center">
+          <motion.div 
+            className="section-header center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 0.8 }}
+          >
             <h2>Farm Gallery</h2>
             <p className="max-w-2xl mx-auto">A glimpse into the daily life and operations at Preshio Farms.</p>
-          </div>
+          </motion.div>
           
-          <Swiper
-            modules={[Autoplay, EffectFade]}
-            effect="fade"
-            loop={true}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            className="gallery-swiper"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 1, delay: 0.2 }}
           >
-            {galleryImages.map((src, idx) => (
-              <SwiperSlide key={idx}>
-                <div className="gallery-image-wrapper">
-                  <img src={src} alt="Farm life" />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            <Swiper
+              modules={[Autoplay, EffectFade, Pagination]}
+              effect="fade"
+              fadeEffect={{ crossFade: true }}
+              loop={true}
+              speed={1500}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3500, disableOnInteraction: false }}
+              className="gallery-swiper"
+            >
+              {galleryImages.map((src, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className="gallery-image-wrapper">
+                    <img src={src} alt="Farm life" />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </motion.div>
         </div>
       </section>
 
@@ -378,16 +396,16 @@ export default function App() {
                 <li><a href="#products">Products</a></li>
                 <li><a href="#our-farm">Our Farm</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#sustainability">Sustainability</a></li>
+                {/* <li><a href="#sustainability">Sustainability</a></li> */}
               </ul>
             </div>
             
             <div className="footer-links-col">
               <h4>Contact</h4>
               <ul>
-                <li className="flex-center-icon"><MapPin size={16}/> 123 Agri Valley, Greenfield</li>
-                <li>HELLO@PRESHIOFARMS.COM</li>
-                <li>+1 (555) 123-4567</li>
+                <li className="flex-center-icon"><MapPin size={16}/>Alero Agbor, Delta State</li>
+                <li>ebadeprecious@gmail.com</li>
+                <li>+234 (81) 6016 2471</li>
               </ul>
             </div>
           </div>
