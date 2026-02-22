@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import { Leaf, Award, MapPin, ArrowRight, Menu, X, Instagram, Twitter, Linkedin, Droplets, Sun, Wind } from 'lucide-react';
+import { Leaf, Award, MapPin, ArrowRight, Menu, X, Instagram, Twitter, Facebook, Droplets, Sun, Wind } from 'lucide-react';
 
 const products = [
   { 
@@ -126,8 +126,8 @@ export default function App() {
               <div className="menu-info">
                 <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.6}}>
                   <h4>Contact</h4>
-                  <p>hello@preshiofarms.com</p>
-                  <p>+1 234 567 890</p>
+                  <p>ebadeprecious@gmail.com</p>
+                  <p>+234 (81) 6016 2471</p>
                 </motion.div>
                 <br/>
                 <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.7}}>
@@ -135,7 +135,7 @@ export default function App() {
                   <div className="social-links">
                     <a href="#"><Instagram size={20}/></a>
                     <a href="#"><Twitter size={20}/></a>
-                    <a href="#"><Linkedin size={20}/></a>
+                    <a href="#"><Facebook size={20}/></a>
                   </div>
                 </motion.div>
               </div>
@@ -416,7 +416,7 @@ export default function App() {
             <div className="social-links">
                <a href="#"><Instagram size={20}/></a>
                <a href="#"><Twitter size={20}/></a>
-               <a href="#"><Linkedin size={20}/></a>
+               <a href="#"><Facebook size={20}/></a>
             </div>
           </div>
         </div>
