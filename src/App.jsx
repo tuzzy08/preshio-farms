@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import { Leaf, Award, MapPin, ArrowRight, Menu, X, Instagram, Twitter, Facebook, Droplets, Sun, Wind } from 'lucide-react';
+import { Leaf, Award, MapPin, ArrowRight, Menu, X, Instagram, Twitter, Facebook, Droplets, Sun, Wind, Linkedin } from 'lucide-react';
 
 const products = [
   { 
@@ -87,7 +87,7 @@ export default function App() {
         </button>
         <div className="nav-logo">
           <Leaf className="logo-icon" size={28} />
-          <h3>Preshio Farms</h3>
+          <h3>Preshio Nigeria Limited</h3>
         </div>
         <a href="#contact" className="nav-contact outline-btn">
           CONTACT US
@@ -109,7 +109,7 @@ export default function App() {
             </button>
             <div className="menu-content">
               <div className="menu-links">
-                {['Products', 'Our Farm', 'Gallery', 'Contact'].map((item, i) => (
+                {['Products', 'Our Farm', 'Team', 'Gallery', 'Contact'].map((item, i) => (
                   <motion.a 
                     key={item} 
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -315,6 +315,61 @@ export default function App() {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section className="team-section" id="team">
+        <div className="container">
+          <motion.div 
+            className="section-header center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2>Meet The Team</h2>
+            <p className="max-w-2xl mx-auto">The dedicated leadership driving agricultural excellence at Preshio Farms.</p>
+          </motion.div>
+          
+          <motion.div 
+            className="team-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2, duration: 0.8 } }
+            }}
+          >
+            <motion.div className="team-card" variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}>
+              <div className="team-image-wrapper">
+                <img src="/assets/Images/Team/ceo.png" alt="Precious Ifeanyi Ebade" loading="lazy" />
+              </div>
+              <div className="team-card-content">
+                <h3 className="team-name">Capt. Ebade Precious</h3>
+                <span className="team-title">CEO/MD</span>
+                <div className="team-socials">
+                  <a href="#" className="team-social-icon"><Linkedin size={18} /></a>
+                  <a href="#" className="team-social-icon"><Twitter size={18} /></a>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div className="team-card" variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}>
+              <div className="team-image-wrapper">
+                <img src="/assets/Images/Team/gm.png" alt="Ifeanyi Ashionye" loading="lazy" />
+              </div>
+              <div className="team-card-content">
+                <h3 className="team-name">Ifeanyi Ashionye</h3>
+                <span className="team-title">GM, Operations</span>
+                <div className="team-socials">
+                  <a href="#" className="team-social-icon"><Linkedin size={18} /></a>
+                  <a href="#" className="team-social-icon"><Twitter size={18} /></a>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Gallery Carousel */}
       <section className="gallery-section bg-beige" id="gallery">
         <div className="container">
@@ -386,7 +441,7 @@ export default function App() {
             <div className="footer-brand">
               <div className="footer-brand-header">
                 <Leaf size={32} className="text-accent"/>
-                <span className="footer-brand-text">Preshio Farms</span>
+                <span className="footer-brand-text">Preshio Nigeria Limited</span>
               </div>
               <p className="footer-desc">Sustainable agriculture producing the finest quality livestock and vegetables for a healthier tomorrow.</p>
             </div>
@@ -396,6 +451,7 @@ export default function App() {
               <ul>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#our-farm">Our Farm</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 {/* <li><a href="#sustainability">Sustainability</a></li> */}
               </ul>
@@ -405,14 +461,17 @@ export default function App() {
               <h4>Contact</h4>
               <ul>
                 <li className="flex-center-icon"><MapPin size={16}/>Alero Agbor, Delta State</li>
-                <li>ebadeprecious@gmail.com</li>
-                <li>+234 (81) 6016 2471</li>
+                <li>73 Joseph Israel Street, Newton Estate, Ogombo, Ajah, Lagos State</li>
+                <li>ebade.precious@preshionigerialimited.com</li>
+                <li>ifeanyi.ashionye@preshionigerialimited.com</li>
+                <li>+234 816 016 2471</li>
+                <li>+234 811 055 7011</li>
               </ul>
             </div>
           </div>
           
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Preshio Farms. All Rights Reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Preshio Nigeria Limited. All Rights Reserved.</p><p>RC NO: 8989841</p>
             <div className="social-links">
                <a href="#"><Instagram size={20}/></a>
                <a href="#"><Twitter size={20}/></a>
