@@ -109,7 +109,7 @@ export default function App() {
             </button>
             <div className="menu-content">
               <div className="menu-links">
-                {['Products', 'Our Farm', 'Team', 'Gallery', 'Contact'].map((item, i) => (
+                {['Products', 'Our Farm', 'Livestock', 'Crops', 'Gallery', 'Logistics', 'Team', 'Contact'].map((item, i) => (
                   <motion.a 
                     key={item} 
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -126,8 +126,11 @@ export default function App() {
               <div className="menu-info">
                 <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.6}}>
                   <h4>Contact</h4>
-                  <p>ebadeprecious@gmail.com</p>
-                  <p>+234 (81) 6016 2471</p>
+                  <p>ebade.precious@preshionigerialimited.com</p>
+                  <p>ifeanyi.ashionye@preshionigerialimited.com</p>
+                  <p>+234 816 016 2471</p>
+                  <p>+234 811 055 7011</p>
+                  <p></p>
                 </motion.div>
                 <br/>
                 <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{delay: 0.7}}>
@@ -269,9 +272,9 @@ export default function App() {
                     <span className="product-category">{product.category}</span>
                     <h3 className="product-title">{product.title}</h3>
                     <p className="product-desc">{product.desc}</p>
-                    <button className="icon-btn">
+                    {/* <button className="icon-btn">
                        <ArrowRight size={20} className="arrow-icon" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </SwiperSlide>
@@ -314,6 +317,177 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Livestock Farming Section */}
+      <section className="detail-section" id="livestock" style={{padding: '8rem 0', backgroundColor: 'var(--text-light)', position: 'relative', overflow: 'hidden'}}>
+        <div className="container">
+          <div className="split-wrapper" style={{alignItems: 'center', gap: '5rem'}}>
+            <motion.div 
+              className="split-content"
+              style={{padding: '0', width: '100%'}}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 style={{color: 'var(--primary-green-dark)'}}>Premium<br/><span className="text-accent">Livestock</span> Farming.</h2>
+              <p style={{color: 'rgba(42, 58, 27, 0.8)'}}>Our livestock are raised ethically in stress-free environments, ensuring the highest quality of meat and dairy products.</p>
+              
+              <div className="feature-grid" style={{display: 'grid', gridTemplateColumns: 'minmax(150px, 1fr) minmax(150px, 1fr)', gap: '2rem', marginTop: '3rem'}}>
+                <div>
+                  <h3 style={{fontSize: '3rem', color: 'var(--accent)', marginBottom: '0'}}>100%</h3>
+                  <span style={{fontWeight: '600', color: 'var(--primary-green-dark)'}}>Organic Feed</span>
+                </div>
+                <div>
+                  <h3 style={{fontSize: '3rem', color: 'var(--accent)', marginBottom: '0'}}>0%</h3>
+                  <span style={{fontWeight: '600', color: 'var(--primary-green-dark)'}}>Added Hormones</span>
+                </div>
+              </div>
+              {/* <button className="outline-btn mt-4" style={{borderColor: 'var(--primary-green-dark)', color: 'var(--primary-green-dark)'}}>Explore Livestock</button> */}
+            </motion.div>
+            
+            <motion.div 
+              className="image-collage"
+              style={{width: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem'}}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <img src="/assets/Images/Livestock/livestock-3.jpeg" alt="Livestock" style={{width: '100%', height: '350px', objectFit: 'cover', borderRadius: '20px', transform: 'translateY(2rem)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)'}}/>
+              <img src="/assets/Images/Livestock/cattle.webp" alt="Cattle" style={{width: '100%', height: '350px', objectFit: 'cover', borderRadius: '20px', transform: 'translateY(-2rem)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)'}}/>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Crop Cultivation Section */}
+      <section className="detail-section" id="crops" style={{padding: '8rem 0', backgroundColor: 'var(--primary-green-dark)', color: 'white', position: 'relative', overflow: 'hidden'}}>
+        <div className="container">
+          <div className="split-wrapper flex-reverse" style={{alignItems: 'center', gap: '5rem', flexDirection: 'row-reverse'}}>
+            
+            <motion.div 
+              className="split-content"
+              style={{padding: '0', width: '100%'}}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2>Sustainable<br/><span className="text-accent">Crop</span> Cultivation.</h2>
+              <p style={{color: 'rgba(255, 255, 255, 0.8)'}}>Rich soils, sustainable water practices, and advanced greenhouses result in bountiful and nutrient-dense harvests, year round.</p>
+              
+              <ul className="check-list mt-4" style={{display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem'}}>
+                <li style={{color: 'white'}}><Leaf size={24} className="text-accent mr-3"/> Diverse range of greenhouse vegetables</li>
+                <li style={{color: 'white'}}><Sun size={24} className="text-accent mr-3"/> High-yield palm oil production</li>
+                <li style={{color: 'white'}}><Droplets size={24} className="text-accent mr-3"/> Water-efficient irrigation systems</li>
+              </ul>
+              {/* <button className="solid-btn mt-4">View Crop Yields</button> */}
+            </motion.div>
+            
+            <motion.div 
+              className="image-stacked"
+              style={{width: '100%', position: 'relative', height: '500px'}}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <img src="/assets/Images/Farm/palm-oil.webp" alt="Palm Oil" style={{position: 'absolute', top: '0', left: '0', width: '60%', height: '350px', objectFit: 'cover', borderRadius: '20px', zIndex: '2', border: '8px solid var(--primary-green-dark)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)'}} />
+              <img src="/assets/Images/Farm/farm-4.jpeg" alt="Greenhouse Crops" style={{position: 'absolute', bottom: '0', right: '0', width: '65%', height: '350px', objectFit: 'cover', borderRadius: '20px', zIndex: '1', filter: 'brightness(0.8)'}} />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Logistics Section */}
+      <section className="logistics-section bg-beige" id="logistics">
+        <div className="container logistics-container">
+          <div className="logistics-wrapper">
+            <motion.div 
+              className="logistics-content"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2>Reliable &<br/>Affordable Logistics.</h2>
+              <p>Ensuring your personal journey is smooth. We provide affordable car rental services alongside our farm logistics.</p>
+              
+              <ul className="check-list mt-4 logistics-list">
+                <li>
+                  <MapPin size={32} className="text-accent logistics-icon" />
+                  <div>
+                    <strong>Farm-to-Door Delivery</strong>
+                    <span>Fresh goods delivered efficiently across regions without compromising quality.</span>
+                  </div>
+                </li>
+                <li>
+                  <Wind size={32} className="text-accent logistics-icon" />
+                  <div>
+                    <strong>Affordable Car Rentals</strong>
+                    <span>Comfortable, reliable vehicles including Sienna minivans for your personal and business trips.</span>
+                  </div>
+                </li>
+              </ul>
+              <a href="#contact" className="solid-btn mt-4 inline-block">Book a Vehicle</a>
+            </motion.div>
+            
+            <motion.div 
+              className="logistics-image-container"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <img src="/assets/Images/Logistics/sienna-red-1.jpg" alt="Logistics Sienna Car" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Carousel */}
+      <section className="gallery-section bg-beige" id="gallery">
+        <div className="container">
+          <motion.div 
+            className="section-header center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2>Farm Gallery</h2>
+            <p className="max-w-2xl mx-auto">A glimpse into the daily life and operations at Preshio Farms.</p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            <Swiper
+              modules={[Autoplay, EffectFade, Pagination]}
+              effect="fade"
+              fadeEffect={{ crossFade: true }}
+              loop={true}
+              speed={1500}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3500, disableOnInteraction: false }}
+              className="gallery-swiper"
+            >
+              {galleryImages.map((src, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className="gallery-image-wrapper">
+                    <img src={src} alt="Farm life" />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </motion.div>
+        </div>
+      </section>
+
 
       {/* Team Section */}
       <section className="team-section" id="team">
@@ -370,50 +544,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* Gallery Carousel */}
-      <section className="gallery-section bg-beige" id="gallery">
-        <div className="container">
-          <motion.div 
-            className="section-header center"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2>Farm Gallery</h2>
-            <p className="max-w-2xl mx-auto">A glimpse into the daily life and operations at Preshio Farms.</p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-            <Swiper
-              modules={[Autoplay, EffectFade, Pagination]}
-              effect="fade"
-              fadeEffect={{ crossFade: true }}
-              loop={true}
-              speed={1500}
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 3500, disableOnInteraction: false }}
-              className="gallery-swiper"
-            >
-              {galleryImages.map((src, idx) => (
-                <SwiperSlide key={idx}>
-                  <div className="gallery-image-wrapper">
-                    <img src={src} alt="Farm life" />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Call to Action Sticky Section */}
-      <section className="cta-section" id="contact">
+      <section className="cta-section">
          <div className="cta-background">
             <img src="/assets/Images/Farm/farm-1.jpeg" alt="Farm aerial" />
             <div className="cta-overlay"></div>
@@ -429,13 +561,13 @@ export default function App() {
             <p>Partner with us for premium agricultural supplies, from robust livestock to pristine vegetables.</p>
             <div className="cta-buttons">
               <button className="solid-btn">Partner With Us</button>
-              <button className="outline-btn-white">Download Catalog</button>
+              {/* <button className="outline-btn-white">Download Catalog</button> */}
             </div>
          </motion.div>
       </section>
 
       {/* Footer */}
-      <footer>
+      <footer id="contact">
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
@@ -451,8 +583,11 @@ export default function App() {
               <ul>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#our-farm">Our Farm</a></li>
-                <li><a href="#team">Team</a></li>
+                <li><a href="#livestock">Livestock</a></li>
+                <li><a href="#crops">Crops</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#logistics">Logistics</a></li>
+                <li><a href="#team">Team</a></li>
                 {/* <li><a href="#sustainability">Sustainability</a></li> */}
               </ul>
             </div>
