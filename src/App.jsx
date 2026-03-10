@@ -394,7 +394,7 @@ export default function App() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <img src="/assets/Images/Farm/palm-oil.webp" alt="Palm Oil" style={{position: 'absolute', top: '0', left: '0', width: '60%', height: '350px', objectFit: 'cover', borderRadius: '20px', zIndex: '2', border: '8px solid var(--primary-green-dark)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)'}} />
-              <img src="/assets/Images/Farm/farm-4.jpeg" alt="Greenhouse Crops" style={{position: 'absolute', bottom: '0', right: '0', width: '65%', height: '350px', objectFit: 'cover', borderRadius: '20px', zIndex: '1', filter: 'brightness(0.8)'}} />
+              <img src="/assets/Images/Farm/Maize-Farming-Farmsquare.jpg" alt="Greenhouse Crops" style={{position: 'absolute', bottom: '0', right: '0', width: '65%', height: '350px', objectFit: 'cover', borderRadius: '20px', border: '8px solid #a9c68d', zIndex: '1', filter: 'brightness(0.8)'}} />
             </motion.div>
           </div>
         </div>
