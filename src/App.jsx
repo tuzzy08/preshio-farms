@@ -430,7 +430,7 @@ export default function App() {
                   </div>
                 </li>
               </ul>
-              <a href="#contact" className="solid-btn mt-4 inline-block">Book a Vehicle</a>
+              <a href="#contact" className="solid-btn mt-4">Book a Vehicle</a>
             </motion.div>
             
             <motion.div 
