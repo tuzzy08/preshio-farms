@@ -11,8 +11,8 @@ import { Leaf, Award, MapPin, ArrowRight, Menu, X, Instagram, Twitter, Facebook,
 
 const products = [
   { 
-    title: 'Organic Poultry', 
-    desc: 'Ethically raised poultry in open pastures.', 
+    title: 'Organic Pork', 
+    desc: 'Ethically raised pork in open pastures.', 
     image: '/assets/Images/Livestock/pig-farming.jpg',
     category: 'Livestock'
   },
@@ -21,25 +21,25 @@ const products = [
     desc: 'We provide high quality fresh fish of different species for sale.', 
     image: '/assets/Images/Livestock/fish.jpg',
     category: 'Livestock'
+  },  
+  { 
+    title: 'Poultry', 
+    desc: 'We provide high quality poultry of different species for sale.', 
+    image: '/assets/Images/Livestock/poultry-2.jpg',
+    category: 'Livestock'
   },
   { 
     title: 'Premium Livestock', 
     desc: 'Ethically raised cattle and poultry in open pastures.', 
     image: '/assets/Images/Livestock/livestock-1.jpeg',
     category: 'Livestock' 
-  },
-  { 
-    title: 'Fresh Harvest', 
-    desc: 'Climate-controlled, pesticide-free vegetables ensuring year-round freshness.', 
-    image: '/assets/Images/Greenhouse/greenhouse-1.jpeg',
-    category: 'Vegetables'
   },  
-  { 
-    title: 'Cassava Stems', 
-    desc: 'High-quality, starchy cassava stems cultivated with care perfectly suited for varied culinary needs.', 
-    image: '/assets/Images/Cassava/3.jpg',
-    category: 'Crops'
-  },
+  // { 
+  //   title: 'Cassava Stems', 
+  //   desc: 'High-quality, starchy cassava stems cultivated with care perfectly suited for varied culinary needs.', 
+  //   image: '/assets/Images/Cassava/3.jpg',
+  //   category: 'Crops'
+  // },
 ];
 
 const galleryImages = [
