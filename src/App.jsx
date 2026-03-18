@@ -30,7 +30,7 @@ const products = [
   },
   { 
     title: 'Premium Livestock', 
-    desc: 'Ethically raised cattle and poultry in open pastures.', 
+    desc: 'Well raised goats and other livestock.', 
     image: '/assets/Images/Livestock/livestock-1.jpeg',
     category: 'Livestock' 
   },  
