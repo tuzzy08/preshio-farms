@@ -319,7 +319,7 @@ export default function App() {
       </section>
 
       {/* Livestock Farming Section */}
-      <section className="detail-section" id="livestock" style={{padding: '8rem 0', backgroundColor: 'var(--text-light)', position: 'relative', overflow: 'hidden'}}>
+      <section className="detail-section" id="livestock" style={{padding: '7rem 0', backgroundColor: 'var(--text-light)', position: 'relative', overflow: 'hidden'}}>
         <div className="container">
           <div className="split-wrapper" style={{alignItems: 'center', gap: '5rem'}}>
             <motion.div 
@@ -362,7 +362,7 @@ export default function App() {
       </section>
 
       {/* Crop Cultivation Section */}
-      <section className="detail-section" id="crops" style={{padding: '8rem 0', backgroundColor: 'var(--primary-green-dark)', color: 'white', position: 'relative', overflow: 'hidden'}}>
+      <section className="detail-section" id="crops" style={{padding: '6rem 0', backgroundColor: 'var(--primary-green-dark)', color: 'white', position: 'relative', overflow: 'hidden'}}>
         <div className="container">
           <div className="split-wrapper flex-reverse" style={{alignItems: 'center', gap: '5rem', flexDirection: 'row-reverse'}}>
             
