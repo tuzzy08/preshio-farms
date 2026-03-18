@@ -11,7 +11,7 @@ import { Leaf, Award, MapPin, ArrowRight, Menu, X, Instagram, Twitter, Facebook,
 
 const products = [
   { 
-    title: 'Organically Raised Poultry', 
+    title: 'Organic Poultry', 
     desc: 'Ethically raised poultry in open pastures.', 
     image: '/assets/Images/Livestock/pig-farming.jpg',
     category: 'Livestock'
