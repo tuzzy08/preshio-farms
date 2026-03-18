@@ -49,7 +49,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .outline-btn { border: 1px solid currentColor; padding: 0.6rem 1.2rem; border-radius: 40px; font-weight: 500; font-size: 0.8rem; letter-spacing: 0.05em; transition: var(--transition); text-transform: uppercase; }
 .outline-btn:hover { background-color: currentColor; color: var(--primary-green-dark); }
 
-.solid-btn { background-color: var(--accent); color: var(--primary-green-dark); padding: 1rem 2rem; border-radius: 40px; font-weight: 500; font-size: 1rem; transition: var(--transition); display: inline-block; }
+.solid-btn { background-color: var(--accent); color: var(--primary-green-dark); padding: 1rem 2rem; border-radius: 40px; font-weight: 500; font-size: 1rem; transition: var(--transition); display: flex; align-items: center; justify-content: center; }
 .solid-btn:hover { background-color: white; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 .outline-btn-white { border: 1px solid white; color: white; padding: 1rem 2rem; border-radius: 40px; font-weight: 500; font-size: 1rem; transition: var(--transition); display: inline-block; }
 .outline-btn-white:hover { background-color: white; color: var(--primary-green-dark); }

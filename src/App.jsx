@@ -11,6 +11,18 @@ import { Leaf, Award, MapPin, ArrowRight, Menu, X, Instagram, Twitter, Facebook,
 
 const products = [
   { 
+    title: 'Organically Raised Poultry', 
+    desc: 'Ethically raised poultry in open pastures.', 
+    image: '/assets/Images/Livestock/pig-farming.jpg',
+    category: 'Livestock'
+  },
+  { 
+    title: 'High Quality Fresh Fish', 
+    desc: 'We provide high quality fresh fish of different species for sale.', 
+    image: '/assets/Images/Livestock/fish.jpg',
+    category: 'Livestock'
+  },
+  { 
     title: 'Premium Livestock', 
     desc: 'Ethically raised cattle and poultry in open pastures.', 
     image: '/assets/Images/Livestock/livestock-1.jpeg',
@@ -21,19 +33,7 @@ const products = [
     desc: 'Climate-controlled, pesticide-free vegetables ensuring year-round freshness.', 
     image: '/assets/Images/Greenhouse/greenhouse-1.jpeg',
     category: 'Vegetables'
-  },
-  { 
-    title: 'Organic Pepper', 
-    desc: 'Vibrantly colored, organically grown peppers bursting with flavor.', 
-    image: '/assets/Images/Pepper/pepper-1.jpg',
-    category: 'Vegetables'
-  },
-  { 
-    title: 'Farm Fresh Produce', 
-    desc: 'Harvested at peak ripeness for maximum nutritional value.', 
-    image: '/assets/Images/Farm/farm-2.jpeg',
-    category: 'Produce'
-  },
+  },  
   { 
     title: 'Cassava Stems', 
     desc: 'High-quality, starchy cassava stems cultivated with care perfectly suited for varied culinary needs.', 
@@ -43,13 +43,13 @@ const products = [
 ];
 
 const galleryImages = [
-  '/assets/Images/Pepper/pepper-2.jpg',
-  '/assets/Images/Farm/farm-1.jpeg',
-  '/assets/Images/Farm/farm-3.jpeg',
-  '/assets/Images/Livestock/livestock-2.jpg',
-  '/assets/Images/Farm/farm-4.jpeg',
+  '/assets/Images/Livestock/poultry.jpg',
+  '/assets/Images/Pepper/irrigation.jpg',
+  '/assets/Images/Livestock/fish-farm.jpg',
+  // '/assets/Images/Farm/farm-3.jpeg',
+  '/assets/Images/Livestock/livestock-3.jpeg',
+  '/assets/Images/Farm/Maize-Farming-Farmsquare.jpg',
   '/assets/Images/Cassava/Cassava-1.jpeg',
-  '/assets/Images/Greenhouse/greenhouse-2.jpg',
 ];
 
 export default function App() {
@@ -547,7 +547,7 @@ export default function App() {
       {/* Call to Action Sticky Section */}
       <section className="cta-section">
          <div className="cta-background">
-            <img src="/assets/Images/Farm/farm-1.jpeg" alt="Farm aerial" />
+            <img src="/assets/Images/Greenhouse/greenhouse-3.jpg" alt="Farm aerial" />
             <div className="cta-overlay"></div>
          </div>
          <motion.div 
@@ -606,7 +606,7 @@ export default function App() {
           </div>
           
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Preshio Nigeria Limited. All Rights Reserved.</p><p>RC NO: 8989841</p>
+            <p>&copy; {new Date().getFullYear()} Preshio Nigeria Limited. All Rights Reserved.</p><p className="text-accent">RC NO: 8989841</p>
             <div className="social-links">
                <a href="#"><Instagram size={20}/></a>
                <a href="#"><Twitter size={20}/></a>
