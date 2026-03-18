@@ -29,7 +29,7 @@ const products = [
     category: 'Livestock' 
   },
   { 
-    title: 'Fresh Greenhouse Harvest', 
+    title: 'Fresh Harvest', 
     desc: 'Climate-controlled, pesticide-free vegetables ensuring year-round freshness.', 
     image: '/assets/Images/Greenhouse/greenhouse-1.jpeg',
     category: 'Vegetables'
